@@ -1,4 +1,8 @@
 blocks:
+  rhapsodic_star:
+    name: rhapsodic star
+    type: chart
+    uuid: rhapsodic_star
   shap_values:
     configuration:
       chart_type: custom
@@ -13,6 +17,51 @@ blocks:
     skip_render: false
     type: chart
     uuid: shap_values
+  shap_values_1:
+    configuration:
+      chart_type: custom
+    data_source:
+      block_uuid: dashboard_data_source
+      pipeline_schedule_id: null
+      pipeline_uuid: xgboost_training
+      type: block
+    error:
+      code: 404
+      errors:
+      - 'Traceback (most recent call last):'
+      - '  File "/usr/local/lib/python3.10/site-packages/mage_ai/api/resources/BlockLayoutItemResource.py",
+        line 178, in member'
+      - '    data = block.execute_with_callback('
+      - '  File "/usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/block/__init__.py",
+        line 1385, in execute_with_callback'
+      - '    output = self.execute_sync('
+      - '  File "/usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/block/__init__.py",
+        line 1672, in execute_sync'
+      - '    return __execute()'
+      - '  File "/usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/block/__init__.py",
+        line 1649, in __execute'
+      - '    raise err'
+      - '  File "/usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/block/__init__.py",
+        line 1551, in __execute'
+      - '    output = self.execute_block('
+      - '  File "/usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/block/__init__.py",
+        line 1891, in execute_block'
+      - '    outputs = self._execute_block('
+      - '  File "/usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/widget/__init__.py",
+        line 317, in _execute_block'
+      - '    exec(custom_code, results)'
+      - '  File "<string>", line 1'
+      - '    mport base64'
+      - '          ^^^^^^'
+      - 'SyntaxError: invalid syntax'
+      - ''
+      message: invalid syntax (<string>, line 1)
+      type: record_not_found
+    name: SHAP values 1
+    name_new: SHAP values 1
+    skip_render: false
+    type: chart
+    uuid: shap_values_1
   shap_values_bar:
     configuration:
       chart_type: custom
@@ -48,4 +97,8 @@ layout:
     height: 400
     width: 1
 - - block_uuid: shap_values_force_chart
+    width: 1
+- - block_uuid: rhapsodic_star
+    width: 1
+- - block_uuid: shap_values_1
     width: 1

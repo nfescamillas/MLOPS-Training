@@ -3,7 +3,7 @@ blocks:
   color: null
   configuration:
     file_source:
-      path: unit_1_data_preparation/data_loaders/ingest.py
+      path: null
   downstream_blocks:
   - ingest_time_series_bar_chart_d1
   - missing_values_for_ingest
@@ -27,7 +27,7 @@ blocks:
   color: null
   configuration:
     file_source:
-      path: unit_1_data_preparation/transformers/prepare.py
+      path: null
   downstream_blocks:
   - prepare_histogram_u9
   - build
@@ -47,7 +47,7 @@ blocks:
   color: null
   configuration:
     file_source:
-      path: unit_1_data_preparation/data_exporters/build.py
+      path: null
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
@@ -89,7 +89,7 @@ variables:
   split_on_feature: lpep_pickup_datetime
   split_on_feature_value: '2024-02-01'
   target: duration
-variables_dir: /root/.mage_data/unit_1_data_preparation
+variables_dir: /home/src/mage_data/unit_3_observability
 widgets:
 - all_upstream_blocks_executed: true
   color: null
@@ -111,8 +111,7 @@ widgets:
   status: executed
   timeout: null
   type: chart
-  upstream_blocks:
-  - ingest
+  upstream_blocks: []
   uuid: ingest_time_series_bar_chart_d1
 - all_upstream_blocks_executed: true
   color: null
@@ -129,11 +128,10 @@ widgets:
   language: python
   name: missing values for ingest
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: chart
-  upstream_blocks:
-  - ingest
+  upstream_blocks: []
   uuid: missing_values_for_ingest
 - all_upstream_blocks_executed: true
   color: null
@@ -232,7 +230,7 @@ widgets:
   language: python
   name: prepare_histogram_u9
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: chart
   upstream_blocks:

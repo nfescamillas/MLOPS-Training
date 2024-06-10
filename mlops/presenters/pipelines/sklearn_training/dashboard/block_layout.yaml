@@ -64,6 +64,10 @@ blocks:
     name: Pipeline runs daily
     type: chart
     uuid: pipeline_runs_daily_sklearn_training_b8
+  spellbinding_rogue:
+    name: spellbinding rogue
+    type: chart
+    uuid: spellbinding_rogue
   trigger_active_status_sklearn_training_m3:
     configuration:
       chart_type: bar chart
@@ -106,6 +110,10 @@ blocks:
     name: Trigger types
     type: chart
     uuid: trigger_types_sklearn_training_b4
+  wispy_sound:
+    name: wispy sound
+    type: chart
+    uuid: wispy_sound
 layout:
 - - block_uuid: trigger_active_status_sklearn_training_m3
     width: 1
@@ -122,4 +130,8 @@ layout:
 - - block_uuid: failed_pipeline_runs_daily_sklearn_training_v0
     width: 1
 - - block_uuid: elemental_glacier
+    width: 1
+- - block_uuid: wispy_sound
+    width: 1
+- - block_uuid: spellbinding_rogue
     width: 1
